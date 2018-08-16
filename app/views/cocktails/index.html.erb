@@ -1,0 +1,17 @@
+
+<div style="text-align: center;" class="all_cocktails">
+  <ul style="list-style-type: none;">
+   <h1>All cocktails</h1>
+   <% @cocktails.each do |c| %>
+     <li>
+       <p><%= link_to c.name, cocktail_path(c) %></p>
+     </li>
+   <% end %>
+  </ul>
+  <%= link_to "add a new cocktail", new_cocktail_path, class: "btn btn-primary"%>
+</div>
+
+
+
+
+

@@ -1,0 +1,14 @@
+<h1>Cocktails#show</h1>
+<p>Find me in app/views/cocktails/show.html.erb</p>
+<p> <%= @cocktail.name %></p>
+
+<br>
+Add a new dose for this drink....
+
+<h1>Dose new</h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, prompt: "What ingredient?" %>
+  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+<% end %>
+
